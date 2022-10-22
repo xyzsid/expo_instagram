@@ -1,18 +1,24 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text } from "react-native";
+import colors from "./src/theme/colors";
+import font from "./src/theme/fonts";
+
+import FontAwesome from "@expo/vector-icons";
+import AntDesign from "@expo/vector-icons/AntDesign";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+    <View
+      style={{
+        flex: 1,
+        // backgroundColor: "red",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Text style={{ color: colors.primary, fontSize: font.size.xxl }}>
+        Instagram
+        <AntDesign name="home" size={25} />
+      </Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
